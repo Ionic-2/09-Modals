@@ -1,0 +1,25 @@
+<ion-header>
+ 	<ion-toolbar>
+ 		<ion-title>Descripción</ion-title>
+		<ion-buttons end>
+			<button (click)="dismiss()"> Cancelar</button>
+		</ion-buttons> 		
+ 	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-avatar item-left> <img src="{{character.image}}"> </ion-avatar>	
+			<h2>{{character.name}}</h2>
+		</ion-item>	<p>{{character.quote}}</p>
+		
+		<ion-item *ngFor="let item of character['item']">
+			{{item.title}}
+			<ion-note item-right>
+			{{item.note}}	
+			</ion-note>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>
